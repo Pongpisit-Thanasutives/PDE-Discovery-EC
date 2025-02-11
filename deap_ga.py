@@ -8,7 +8,7 @@ def myInitRepeat(container, func, n):
     return container(func() for _ in range(random.randint(1, n)))
 
 def numericalize_module(module, base_features):
-    assert type(module) == tuple
+    assert type(module) is tuple
     return base_features[module]
 
 def numericalize_genome(genome, base_features):
