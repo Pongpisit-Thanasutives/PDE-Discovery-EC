@@ -1,3 +1,5 @@
+# From Adaptive Uncertainty-Penalized Model Selection for Data-Driven PDE Discovery (https://ieeexplore.ieee.org/document/10401233)
+# https://github.com/Pongpisit-Thanasutives/UBIC-test
 import numpy as np
 import statsmodels.api as sm
 
