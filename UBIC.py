@@ -34,7 +34,7 @@ def BIC_AIC(prediction, ground, nparams, reg_func=lambda x:x):
     llf = log_like_value(prediction, ground)
     return -2*llf + np.log(ground.shape[0])*nparams, -2*llf + 2*nparams
 
-def baye_uncertainties(best_subsets, dataset, u_type='var', take_sqrt=True, ridge_lambda=0, threshold=None):
+def baye_uncertainties(best_subsets, dataset, u_type='var', take_sqrt=True, ridge_lambda=0, threshold=0.0):
     # if you want u_type='std', then call u_type='var' and take_sqrt=True
     XX, yy = dataset
     assert u_type == 'var' or 'cv' in u_type
@@ -48,8 +48,10 @@ def baye_uncertainties(best_subsets, dataset, u_type='var', take_sqrt=True, ridg
         com = len(efi)
         Phi = XX[:, list(efi)]
         w = np.linalg.lstsq(Phi, yy, rcond=None)[0]
-        err = yy-Phi@w
+        w[np.abs(w) < abs(threshold)] = 0.0
+
         # By MLE, we have variance_y written as follows:
+        err = yy-Phi@w
         variance_y = np.mean(err**2)
         w = w.reshape(-1, 1) # w = w[np.abs(w)>0].reshape((com, 1))
 
@@ -61,8 +63,6 @@ def baye_uncertainties(best_subsets, dataset, u_type='var', take_sqrt=True, ridg
 
         posterior_cov = variance_y*np.linalg.pinv(variance_y * prior_cov_inv + Phi.T@Phi)
         posterior_mean = posterior_cov@(prior_cov_inv@prior_mean + (Phi.T@yy)/variance_y)
-        if threshold is not None:
-            posterior_mean[abs(posterior_mean) < abs(threshold)] = 0
         post_means[:, k:k+1][list(efi)] = posterior_mean
 
         # collecting bics
