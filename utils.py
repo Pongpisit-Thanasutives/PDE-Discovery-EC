@@ -1,7 +1,19 @@
 from decimal import Decimal
-import shap
+import numpy as np
 from sklearn import linear_model
-# from kneed import KneeLocator
+from kneed import KneeLocator
+import shap
+
+def knee(x, y, interp_method='linear', degree=7):
+    if interp_method == 'polynomial':
+        opt = KneeLocator(x, y, S=1, interp_method='polynomial', polynomial_degree=degree, 
+                          curve='convex', direction='decreasing').knee
+    elif interp_method == 'linear':
+        opt = KneeLocator(x, y, S=1, curve='convex', direction='decreasing').knee
+    else:
+        raise Exception("Unknown interp_method...")
+    opt = min(opt, x[np.argmin(y)])
+    return opt
 
 def colvec(arr):
     return arr.reshape(-1, 1)
