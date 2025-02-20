@@ -2,6 +2,7 @@ from decimal import Decimal
 import numpy as np
 from sklearn import linear_model
 from kneed import KneeLocator
+from kneefinder import KneeFinder
 import shap
 
 def knee(x, y, interp_method='linear', degree=7):
@@ -15,8 +16,25 @@ def knee(x, y, interp_method='linear', degree=7):
     opt = min(opt, x[np.argmin(y)])
     return opt
 
+def knee_finder(y, decreasing=False):
+    y = np.array(y)
+    if decreasing:
+        decreasing_indices = range(0, len(y))
+    else:
+        decreasing_indices = decreasing_values_indices(y)
+    kf = KneeFinder(decreasing_indices, y[decreasing_indices])
+    return int(kf.find_knee()[0])
+
 def colvec(arr):
     return arr.reshape(-1, 1)
+
+def decreasing_values_indices(arr):
+    mini = max(arr)+1; out = []
+    for i, e in enumerate(arr):
+        if e < mini:
+            mini = e
+            out.append(i)
+    return np.array(out)
 
 def sci_format(n):
     sf = '%.2E' % Decimal(n)
