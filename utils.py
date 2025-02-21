@@ -22,6 +22,8 @@ def knee_finder(y, decreasing=False):
         decreasing_indices = range(0, len(y))
     else:
         decreasing_indices = decreasing_values_indices(y)
+    if len(decreasing_indices) == 2 and y[1] < y[0]:
+        return 1
     kf = KneeFinder(decreasing_indices, y[decreasing_indices])
     return int(kf.find_knee()[0])
 
