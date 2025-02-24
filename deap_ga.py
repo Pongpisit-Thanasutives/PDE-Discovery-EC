@@ -4,6 +4,16 @@ import numpy as np
 def generate_module(n_poly, n_derivatives):
     return (random.randint(0, n_poly), random.randint(0, n_derivatives))
 
+def generate_ode_module(n_poly, n_vars):
+    module = [0 for _ in range(n_vars)]
+    for i in range(n_vars):
+        deg = random.randint(0, n_poly)
+        module[i] = deg
+        n_poly -= deg
+        if n_poly <= 0:
+            break
+    return tuple(module)
+
 # container = frozenset, func = generate_module, n = max complexity of a generated PDE
 def myInitRepeat(container, func, n):
     return container(func() for _ in range(random.randint(1, n)))
