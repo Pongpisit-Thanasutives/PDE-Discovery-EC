@@ -30,6 +30,10 @@ def knee_finder(y, decreasing=False):
 def colvec(arr):
     return arr.reshape(-1, 1)
 
+def select_column(arr, idx):
+    assert len(arr.shape) == 2
+    return arr[:, idx:idx+1]
+
 def decreasing_values_indices(arr):
     mini = max(arr)+1; out = []
     for i, e in enumerate(arr):
