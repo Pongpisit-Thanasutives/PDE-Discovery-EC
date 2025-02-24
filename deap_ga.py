@@ -4,6 +4,7 @@ import numpy as np
 def generate_module(n_poly, n_derivatives):
     return (random.randint(0, n_poly), random.randint(0, n_derivatives))
 
+# container = frozenset, func = generate_module, n = max complexity of a generated PDE
 def myInitRepeat(container, func, n):
     return container(func() for _ in range(random.randint(1, n)))
 
