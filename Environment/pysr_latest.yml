@@ -36,7 +36,7 @@ dependencies:
   - dav1d=1.2.1=h0dc2134_0
   - deap=1.4.2=py311hcf53e2f_0
   - debugpy=1.8.12=py311hc356e98_0
-  - decorator=5.2.0=pyhd8ed1ab_0
+  - decorator=5.2.1=pyhd8ed1ab_0
   - deeptime=0.4.4=py311h00abc04_3
   - ecos=2.0.14=py311h0034819_1
   - exceptiongroup=1.2.2=pyhd8ed1ab_1
@@ -73,7 +73,7 @@ dependencies:
   - lerc=4.0.0=hb486fe8_0
   - libabseil=20240722.0=cxx17_h0e468a2_4
   - libaec=1.1.3=h73e2aa4_0
-  - libavif16=1.1.1=h71406da_2
+  - libavif16=1.1.1=h6214335_3
   - libblas=3.9.0=31_h7f60823_openblas
   - libbrotlicommon=1.1.0=h00291cd_2
   - libbrotlidec=1.1.0=h00291cd_2
@@ -170,7 +170,7 @@ dependencies:
   - rapidfuzz=3.12.1=py311hc356e98_0
   - rav1e=0.6.6=h7205ca4_2
   - re2=2024.07.02=ha5e900a_2
-  - readline=8.2=h9e318b2_1
+  - readline=8.2=h7cca4af_2
   - requests=2.32.3=pyhd8ed1ab_1
   - scienceplots=2.1.1=pyhd8ed1ab_1
   - scikit-image=0.25.2=py311hcf53e2f_0
@@ -187,10 +187,10 @@ dependencies:
   - snappy=1.2.1=haf3c120_1
   - stack_data=0.6.3=pyhd8ed1ab_1
   - statsmodels=0.14.4=py311h0034819_0
-  - svt-av1=2.3.0=h97d8b74_0
+  - svt-av1=3.0.0=h240833e_0
   - sympy=1.13.3=pypyh2585a3b_103
   - tbb=2021.13.0=hb890de9_1
-  - tensorboard=2.18.0=pyhd8ed1ab_1
+  - tensorboard=2.19.0=pyhd8ed1ab_0
   - tensorboard-data-server=0.7.0=py311h968b48f_2
   - threadpoolctl=3.5.0=pyhc1e730c_0
   - tifffile=2025.2.18=pyhd8ed1ab_0
