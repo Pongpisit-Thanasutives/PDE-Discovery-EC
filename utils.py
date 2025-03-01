@@ -1,4 +1,5 @@
 from decimal import Decimal
+import itertools
 import numpy as np
 from sklearn import linear_model
 from kneed import KneeLocator
@@ -45,6 +46,16 @@ def decreasing_values_indices(arr):
             mini = e
             out.append(i)
     return np.array(out)
+
+def distribute_order(n_poly, n_vars):
+    out = []
+    for n in range(n_poly+1):
+        distribution = []
+        for event in itertools.product(range(n+1), repeat=n_vars):
+            if sum(event) == n:
+                distribution.append(event)
+        out.extend(sorted(distribution, reverse=True))
+    return out
 
 def sci_format(n):
     sf = '%.2E' % Decimal(n)
