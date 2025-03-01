@@ -13,7 +13,11 @@ def knee(x, y, interp_method='linear', degree=7):
         opt = KneeLocator(x, y, S=1, curve='convex', direction='decreasing').knee
     else:
         raise Exception("Unknown interp_method...")
-    opt = min(opt, x[np.argmin(y)])
+    argmin = x[np.argmin(y)]
+    if opt is not None:
+        opt = min(opt, argmin)
+    else:
+        opt = argmin
     return opt
 
 def knee_finder(y, decreasing=False):

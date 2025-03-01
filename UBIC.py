@@ -29,8 +29,7 @@ def log_like_value(prediction, ground):
         return llf
     return ssr2llf(ssr, nobs)
 
-def BIC_AIC(prediction, ground, nparams, reg_func=lambda x:x):
-    nparams = reg_func(nparams)
+def BIC_AIC(prediction, ground, nparams):
     llf = log_like_value(prediction, ground)
     return -2*llf + np.log(ground.shape[0])*nparams, -2*llf + 2*nparams
 
