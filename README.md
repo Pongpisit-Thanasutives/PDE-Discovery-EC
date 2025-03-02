@@ -1,2 +1,2 @@
 # PDE-Discovery-EC
-Data-driven PDE Discovery using Evolutionary Computation
+Data-driven PDE/ODE Discovery using Evolutionary Computation
