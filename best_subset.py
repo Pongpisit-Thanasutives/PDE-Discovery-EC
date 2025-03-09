@@ -17,7 +17,7 @@ from p_linear_regression import PLinearRegression, MLinearRegression
 try:
     from mrmr import mrmr_regression
 except ImportError:
-    # print("mrmr is not installed in the env you are using. This may cause an error in future if you try to use the (missing) lib.")
+    print("mrmr is not installed in the env you are using. This may cause an error in future if you try to use the (missing) lib.")
     pass
 
 from functools import lru_cache, reduce
@@ -112,9 +112,9 @@ def p_regression(X, y):
     scores = 1-p_values
     return scores/scores.sum()
 
-def backward_refinement(feature_hierarchy, dataset, mode="SelectKBest", ic_type="aic", sk_normalize_axis=0, verbose=False):
+def backward_refinement(feature_hierarchy, dataset, mode="SelectKBest", ic_type="bic", sk_normalize_axis=0, verbose=False):
     XX, yy = dataset
-    mode = np.argmax([fuzz.ratio(mode.lower(), m) for m in ['selectkbest', 'rfe', 'mrmr_regression']])
+    mode = np.argmax([fuzz.ratio(mode.lower(), m) for m in ['selectkbest', 'rfe', 'mrmr']])
     if verbose: print(['SelectKBest', 'RFE_PLinearRegression', 'mrmr_regression'][mode])
     score_track = ScoreTracker({})
     history = set()
