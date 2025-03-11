@@ -6,17 +6,17 @@ from kneed import KneeLocator
 from kneefinder import KneeFinder
 import shap
 
-def knee(x, y, interp_method='linear', degree=7, direction='decreasing'):
+def knee(x, y, S=1, interp_method='linear', degree=7, direction='decreasing'):
     if direction == 'decreasing':
         curve = 'convex'
     elif direction == 'increasing':
         curve = 'concave'
 
     if interp_method == 'polynomial':
-        opt = KneeLocator(x, y, S=1, interp_method='polynomial', polynomial_degree=degree, 
+        opt = KneeLocator(x, y, S=S, interp_method='polynomial', polynomial_degree=degree, 
                           curve=curve, direction=direction).knee
     elif interp_method == 'linear':
-        opt = KneeLocator(x, y, S=1, curve=curve, direction=direction).knee
+        opt = KneeLocator(x, y, S=S, curve=curve, direction=direction).knee
     else:
         raise Exception("Unknown interp_method...")
 
