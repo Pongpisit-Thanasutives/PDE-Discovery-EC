@@ -6,7 +6,7 @@ from kneed import KneeLocator
 from kneefinder import KneeFinder
 import shap
 
-def knee(x, y, S=1, interp_method='linear', degree=7, direction='decreasing'):
+def knee(x, y, S=0.95, interp_method='linear', degree=7, direction='decreasing'):
     if direction == 'decreasing':
         curve = 'convex'
     elif direction == 'increasing':
