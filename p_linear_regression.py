@@ -1,5 +1,5 @@
 from sklearn import __version__ as SKLEARN_VERSION
-print("Sklearn's version:", SKLEARN_VERSION)
+# print("Sklearn's version:", SKLEARN_VERSION)
 from sklearn.linear_model import LinearRegression as SkLinearRegression
 from scipy import stats
 import numpy as np
