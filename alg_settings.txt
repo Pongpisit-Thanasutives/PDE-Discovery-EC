@@ -1,0 +1,78 @@
+### DNSGA2, TIME=2.91 ###
+termination = DefaultMultiObjectiveTermination(
+        xtol=1e-8,
+        cvtol=1e-6,
+        ftol=1e-8,
+        period=50,
+        n_max_gen=100,
+        n_max_evals=100000
+    )
+algorithm = DNSGA2(pop_size=pop_size,
+                    sampling=PopulationSampling(),
+                    crossover=GenomeCrossover(),
+                    mutation=GenomeMutation(),
+                    eliminate_duplicates=DuplicateElimination(),
+                    )
+### MOEAD ###
+termination = DefaultMultiObjectiveTermination(
+        xtol=1e-10,
+        cvtol=1e-8,
+        ftol=1e-10,
+        period=100,
+        n_max_gen=5000,
+        n_max_evals=100000
+    )
+    algorithm = MOEAD(
+        ref_dirs=get_reference_directions("uniform", 2, n_partitions=5),
+        n_neighbors=4,
+        prob_neighbor_mating=0.9,
+        sampling=PopulationSampling(),
+        crossover=GenomeCrossover(),
+        mutation=GenomeMutation()
+    )
+### SMSEMOA, TIME=2.63 ###
+termination = DefaultMultiObjectiveTermination(
+        xtol=1e-8,
+        cvtol=1e-6,
+        ftol=1e-8,
+        period=50,
+        n_max_gen=200,
+        n_max_evals=100000
+    )
+algorithm = SMSEMOA(pop_size=pop_size,
+                    sampling=PopulationSampling(),
+                    crossover=GenomeCrossover(),
+                    mutation=GenomeMutation(),
+                    eliminate_duplicates=DuplicateElimination(),
+                    )
+### NSGA2, TIME=3.74 ###
+termination = DefaultMultiObjectiveTermination(
+        xtol=1e-8,
+        cvtol=1e-6,
+        ftol=1e-8,
+        period=50,
+        n_max_gen=200,
+        n_max_evals=100000
+    )
+algorithm = NSGA2(pop_size=pop_size,
+                        sampling=PopulationSampling(),
+                        crossover=GenomeCrossover(),
+                        mutation=GenomeMutation(),
+                        eliminate_duplicates=DuplicateElimination(),
+                        )
+### AGEMOEA, TIME=3.34 ###
+termination = DefaultMultiObjectiveTermination(
+        xtol=1e-8,
+        cvtol=1e-6,
+        ftol=1e-8,
+        period=50,
+        n_max_gen=200,
+        n_max_evals=100000
+    )
+algorithm = AGEMOEA(pop_size=pop_size,
+                        sampling=PopulationSampling(),
+                        crossover=GenomeCrossover(),
+                        mutation=GenomeMutation(),
+                        eliminate_duplicates=DuplicateElimination(),
+                        )
+

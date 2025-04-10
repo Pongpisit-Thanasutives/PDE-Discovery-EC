@@ -3,5 +3,5 @@ Data-driven differential equation (PDE/ODE) Discovery using Evolutionary Computa
 
 Default: DNSGA2
 
-Faster: MOEAD
+Faster: MOEAD, SMSEMOA
 
