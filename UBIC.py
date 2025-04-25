@@ -36,7 +36,7 @@ def BIC_AIC(prediction, ground, nparams):
 def baye_uncertainties(best_subsets, dataset, u_type='var', take_sqrt=True, ridge_lambda=0.0, threshold=0.0, l1_ratio=1.0):
     # if you want u_type='std', then call u_type='var' and take_sqrt=True
     XX, yy = dataset
-    assert 0.0 <= l1_ratio <= 1.0
+    assert 0 <= l1_ratio <= 1
     assert u_type == 'var' or 'cv' in u_type
     assert len(XX) == len(yy)
     yy = yy.reshape(-1, 1)
