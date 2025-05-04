@@ -18,14 +18,11 @@ def decreasing_values_indices(arr):
     return np.array(out)
 
 def log_like_value(prediction, ground): 
-    nobs = float(ground.shape[0])
+    nobs = len(ground)
     ssr = np.sum(np.abs(ground - prediction)**2)
     def ssr2llf(ssr, nobs):
-        # keep the constant term nobs2
         nobs2 = nobs / 2.0
         llf = -nobs2 * np.log(2 * np.pi) - nobs2 * np.log(ssr / nobs) - nobs2
-        # llf2 = -nobs2 * np.log(np.pi) - nobs2 * np.log(ssr / nobs2) - nobs2 # should be faster
-        # assert np.allclose(llf, llf2)
         return llf
     return ssr2llf(ssr, nobs)
 
@@ -40,6 +37,13 @@ def BIC(prediction, ground, nparams):
 def BIC_AIC(prediction, ground, nparams):
     llf = log_like_value(prediction, ground)
     return -2*llf + np.log(ground.shape[0])*nparams, -2*llf + 2*nparams
+
+# For LinearRegression & single y: sklearn.metrics.make_scorer(BIC_score, estimator=estimator)
+def BIC_score(y_true, y_pred, estimator):
+    nparams = len(estimator.coef_)
+    if hasattr(estimator, 'intercept_'):
+        nparams += 1
+    return 2*log_like_value(y_pred, y_true)-np.log(len(y_true))*nparams
 
 def baye_uncertainties(best_subsets, dataset, u_type='var', take_sqrt=True, ridge_lambda=0.0, threshold=0.0, l1_ratio=1.0):
     # if you want u_type='std', then call u_type='var' and take_sqrt=True
