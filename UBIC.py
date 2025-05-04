@@ -38,7 +38,7 @@ def BIC_AIC(prediction, ground, nparams):
     llf = log_like_value(prediction, ground)
     return -2*llf + np.log(ground.shape[0])*nparams, -2*llf + 2*nparams
 
-# For LinearRegression & single y: sklearn.metrics.make_scorer(BIC_score, estimator=estimator)
+# For fitted LinearRegression & single y: sklearn.metrics.make_scorer(BIC_score, estimator=estimator)
 def BIC_score(y_true, y_pred, estimator):
     nparams = len(estimator.coef_)
     if hasattr(estimator, 'intercept_'):
