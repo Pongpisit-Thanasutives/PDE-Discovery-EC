@@ -56,3 +56,22 @@ def mbic2(loglik, k, n, p, const=4):
 
     return mbic(loglik, k, n, p, const) - penalty
 
+def ebic(loglik, k, n, p, const=0):
+    '''
+    loglik	
+    A numeric, the log-likelihood.
+
+    k	
+    An integer >= 0, the number of selected variables.
+
+    n	
+    An integer > 0, the number of observations.
+
+    p	
+    An integer > 0, the number of all variables or a weight.
+
+    const (kappa): See Modified versions of the Bayesian Information Criterion for sparse Generalized Linear Models
+    A numeric > 0, [0, 1] (0 means uniform prior)
+    '''
+    return bic(loglik, k, n) + 2 * (1-const) * math.log(math.comb(p, k))
+
