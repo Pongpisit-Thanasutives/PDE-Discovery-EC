@@ -13,7 +13,7 @@ class SCO(BaseEstimator, RegressorMixin):
 
     def fit(self, X, y):
         n, p = X.shape
-        self.solver = ScopeSolver(dimensionality=p, path_type=self.path_type, sparsity=self.sparsity, sample_size=n, ic_method=self.ic_method) 
+        self.solver = ScopeSolver(dimensionality=p, path_type=self.path_type, sparsity=self.sparsity, sample_size=n, ic_method=self.ic_method)
         self.coef_ = self.solver.solve(lambda params: jnp.mean((y-X@params)**2), jit=True)
         return self
 
