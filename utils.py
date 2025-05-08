@@ -5,6 +5,7 @@ from sklearn import linear_model
 from kneed import KneeLocator
 from kneefinder import KneeFinder
 import shap
+import sage # No need to import it if sage_linear_importance would never be called.
 
 def knee(x, y, S=0.95, interp_method='linear', degree=7, direction='decreasing'):
     if direction == 'decreasing':
@@ -81,6 +82,11 @@ def shap_linear_importance(X_pre, y_pre, scale=True, full=False):
         if scale:
             feature_importance = feature_importance/feature_importance.sum()
     return feature_importance
+
+def sage_linear_importance(X_pre, y_pre):
+    imputer = sage.MarginalImputer(linear_model.LinearRegression(fit_intercept=False).fit(X_pre, y_pre), X_pre)
+    estimator = sage.PermutationEstimator(imputer, 'mse')
+    return estimator(X_pre_top, y_pre)
 
 def extract_unique_candidates(pareto_optimal_models):
     unique_candidates = frozenset()
