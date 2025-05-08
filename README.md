@@ -5,3 +5,5 @@ Default: DNSGA2
 
 Faster: SMSEMOA
 
+Main environment: ./Environment/sindy.yml
+
