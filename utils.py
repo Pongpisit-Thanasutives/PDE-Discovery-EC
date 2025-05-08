@@ -72,12 +72,14 @@ def sci_format(n):
     sf = sf.split('E')
     return float(sf[0]), int(sf[1])
 
-def shap_linear_importance(X_pre, y_pre, scale=True):
+def shap_linear_importance(X_pre, y_pre, scale=True, full=False):
     explainer = shap.explainers.Linear(linear_model.LinearRegression(fit_intercept=False).fit(X_pre, y_pre),
                                        X_pre)
-    feature_importance = abs(explainer(X_pre).values).mean(axis=0)
-    if scale:
-        feature_importance = feature_importance/sum(feature_importance)
+    feature_importance = explainer(X_pre).values
+    if not full:
+        feature_importance = abs(feature_importance).mean(axis=0)
+        if scale:
+            feature_importance = feature_importance/feature_importance.sum()
     return feature_importance
 
 def extract_unique_candidates(pareto_optimal_models):
