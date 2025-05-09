@@ -3,6 +3,7 @@ import itertools
 
 import numpy as np
 from sklearn import linear_model
+from sklearn.inspection import permutation_importance
 
 from kneed import KneeLocator
 from kneefinder import KneeFinder
@@ -79,6 +80,17 @@ def sci_format(n):
     sf = '%.2E' % Decimal(n)
     sf = sf.split('E')
     return float(sf[0]), int(sf[1])
+
+def permutation_linear_importance(X_pre, y_pre, n_repeats=30, scale=False, full=False):
+    lm = linear_model.LinearRegression(fit_intercept=False).fit(X_pre, y_pre)
+    pi = permutation_importance(lm, X_pre, y_pre, n_repeats=30)
+    if not full:
+        pi = pi['importances_mean']
+        if scale:
+            pi = pi/pi.sum()
+    else:
+        pi = pi['importances'].T
+    return pi
 
 def shap_linear_importance(X_pre, y_pre, scale=True, full=False):
     explainer = shap.explainers.Linear(linear_model.LinearRegression(fit_intercept=False).fit(X_pre, y_pre),
