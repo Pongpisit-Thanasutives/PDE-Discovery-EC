@@ -172,7 +172,6 @@ dependencies:
   - scs=3.2.7.post2=default_py310h24cc7b1_0
   - setuptools=78.1.1=py310hca03da5_0
   - six=1.17.0=py310hca03da5_0
-  - slicer=0.0.7=pyhd3eb1b0_0
   - sparse=0.15.4=py310hca03da5_0
   - sqlite=3.45.3=h80987f9_0
   - stack_data=0.2.0=pyhd3eb1b0_0
@@ -220,6 +219,7 @@ dependencies:
       - dill==0.3.9
       - dm-haiku==0.0.14
       - dunamai==1.19.2
+      - eli5==0.16.0
       - etils==1.12.2
       - filelock==3.18.0
       - flax==0.10.4
@@ -265,12 +265,14 @@ dependencies:
       - pyyaml==6.0.2
       - regex==2024.11.6
       - requests==2.32.3
+      - rfpimp==1.3.7
       - rich==14.0.0
       - safetensors==0.5.3
       - scikit-image==0.22.0
       - shap==0.43.0
       - shellingham==1.5.4
       - simplejson==3.20.1
+      - slicer==0.0.7
       - smart-open==7.1.0
       - spacy==3.7.5
       - spacy-legacy==3.0.12
