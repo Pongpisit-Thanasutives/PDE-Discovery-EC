@@ -113,3 +113,21 @@ def extract_unique_candidates(pareto_optimal_models):
         unique_candidates = unique_candidates.union(pareto_optimal_models[i][0])
     return sorted(unique_candidates)
 
+# Linear regression with feature importances
+class LinearRegressionWithFI(linear_model.LinearRegression):
+    def __init__(self, fit_intercept=False):
+        super().__init__(fit_intercept=fit_intercept)
+        self.feature_importances_ = None
+
+    def fit(self, X, y):
+        # Fit the original LinearRegression model
+        super().fit(X, y)
+
+        # Compute SHAP values
+        explainer = shap.explainers.Linear(self, X)
+        shap_values = explainer(X).values
+
+        # Mean absolute SHAP value
+        self.feature_importances_ = np.abs(shap_values).mean(axis=0)
+        return self
+
