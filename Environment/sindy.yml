@@ -64,7 +64,6 @@ dependencies:
   - executing=0.8.3=pyhd3eb1b0_0
   - flake8=7.1.1=py310hca03da5_0
   - fonttools=4.55.3=py310h80987f9_0
-  - freetype=2.13.3=h47d26ad_0
   - frozenlist=1.5.0=py310h80987f9_0
   - fsspec=2024.12.0=py310hca03da5_0
   - func_timeout=4.3.5=pyhd3eb1b0_0
@@ -91,7 +90,6 @@ dependencies:
   - intervaltree=3.1.0=pyhd3eb1b0_0
   - ipopt=3.14.17=h945cc1c_2
   - ipykernel=6.29.5=py310hca03da5_1
-  - ipywidgets=8.1.5=py310hca03da5_0
   - isort=6.0.1=py310hca03da5_0
   - jaraco.classes=3.2.1=pyhd3eb1b0_0
   - jaraco.context=6.0.0=py310hca03da5_0
@@ -110,8 +108,6 @@ dependencies:
   - krb5=1.20.1=hf3e1bf2_1
   - lazy-loader=0.4=pyhd8ed1ab_2
   - lazy_loader=0.4=pyhd8ed1ab_2
-  - lcms2=2.16=he26ebf3_1
-  - lerc=4.0.0=h313beb8_0
   - libabseil=20250127.0=cxx17_h313beb8_0
   - libaec=1.1.3=hebf3989_0
   - libblas=3.9.0=16_osxarm64_openblas
@@ -119,7 +115,6 @@ dependencies:
   - libclang13=14.0.6=default_h24352ff_2
   - libcurl=8.12.1=hde089ae_0
   - libcxx=19.1.0=ha82da77_0
-  - libdeflate=1.22=h80987f9_0
   - libedit=3.1.20230828=h80987f9_0
   - libev=4.33=h1a28f6b_1
   - libfabric=2.1.0=hce30654_1
@@ -145,8 +140,6 @@ dependencies:
   - libspatialindex=1.9.3=hc377ac9_0
   - libsqlite=3.46.0=hfb93653_0
   - libssh2=1.11.1=h3e2b118_0
-  - libtiff=4.7.0=h91aec0a_0
-  - libwebp-base=1.3.2=h80987f9_1
   - libxml2=2.13.8=h0b34f26_0
   - libzip=1.10.1=ha0bc3c6_3
   - libzlib=1.2.13=hfb2fe0b_6
@@ -185,7 +178,6 @@ dependencies:
   - numpy-base=1.26.4=py310ha9811e2_0
   - numpydoc=1.7.0=py310hca03da5_0
   - oauthlib=3.2.2=py310hca03da5_0
-  - openjpeg=2.5.2=hba36e21_1
   - openldap=2.6.4=he7ef289_0
   - openssl=3.5.0=h81ee809_0
   - osqp=0.6.7.post3=py310h3420790_1
@@ -200,7 +192,6 @@ dependencies:
   - pcre2=10.42=hb066dcc_1
   - pexpect=4.8.0=pyhd3eb1b0_3
   - pickleshare=0.7.5=pyhd3eb1b0_1003
-  - pip=25.1=pyhc872135_2
   - platformdirs=4.3.7=py310hca03da5_0
   - plotly=6.0.1=pyhd8ed1ab_0
   - pluggy=1.5.0=py310hca03da5_0
@@ -327,7 +318,6 @@ dependencies:
   - webencodings=0.5.1=py310hca03da5_1
   - whatthepatch=1.0.2=py310hca03da5_0
   - wheel=0.45.1=py310hca03da5_0
-  - widgetsnbextension=4.0.13=py310hca03da5_0
   - wrapt=1.17.0=py310h80987f9_0
   - wurlitzer=3.0.2=py310hca03da5_0
   - xz=5.6.4=h80987f9_1
@@ -349,17 +339,20 @@ dependencies:
       - category-encoders==2.6.4
       - chex==0.1.89
       - choldate==0.1.0
+      - colour==0.1.5
       - cvxpy==1.6.5
       - cython==3.0.12
       - derivative==0.6.3
       - dm-haiku==0.0.14
       - el0ps==0.0.3
+      - eli5==0.16.0
       - etils==1.12.0
       - filelock==3.18.0
       - findiff==0.12.1
       - flax==0.10.4
       - funcy==2.0
       - gpax==0.1.8
+      - graphviz==0.20.3
       - gurobipy==12.0.2
       - h5netcdf==1.6.1
       - hierscale==1.0.6
@@ -367,6 +360,7 @@ dependencies:
       - importlib-metadata==8.5.0
       - importlib-resources==6.5.2
       - ipython==8.36.0
+      - ipywidgets==8.1.7
       - jax==0.4.38
       - jaxlib==0.4.38
       - jlc-choldate==0.4
@@ -405,8 +399,9 @@ dependencies:
       - orbax-checkpoint==0.11.5
       - p-tqdm==1.4.2
       - pillow==11.2.1
+      - pip==25.1.1
       - pip-check==2.9
-      - psutil==5.9.6
+      - psutil==7.0.0
       - pybnb==0.6.2
       - pydmd==2025.5.1
       - pyhamcrest==2.1.0
@@ -415,11 +410,12 @@ dependencies:
       - pynumdiff==0.1.2.5.dev63+g2973082
       - pysindy==1.7.6.dev523+g04f2dc2
       - pyutsalgorithms==0.1.3
+      - rfpimp==1.3.7
       - rich==14.0.0
       - sage-importance==0.0.7
       - semver==3.0.4
-      - setuptools==80.3.1
-      - shap==0.47.1
+      - setuptools==80.1.0
+      - shap==0.47.2
       - si4pipeline==1.0.1
       - sicore==2.5.0
       - simplejson==3.20.1
@@ -430,6 +426,7 @@ dependencies:
       - sphinxcontrib-devhelp==1.0.2
       - sphinxcontrib-htmlhelp==2.0.0
       - sphinxcontrib-qthelp==1.0.3
+      - stratx==0.5
       - symengine==0.14.0
       - sympy==1.14.0
       - tensorstore==0.1.72
@@ -438,6 +435,7 @@ dependencies:
       - torch==2.7.0
       - treescope==0.1.9
       - tzdata==2023.3
+      - widgetsnbextension==4.0.14
       - xarray==2025.4.0
       - zipp==3.20.2
       - zuko==1.4.0
