@@ -21,7 +21,7 @@ def log_evidence(X_full, y, effective_indices=None, v=1/2, k=3, standardize=Fals
     KTy = KT@y # intermediate var
     yTy = yT@y # intermediate var
 
-    mu = np.linalg.lstsq(K, y, rcond=None)[0]
+    mu = np.linalg.lstsq(K, y, rcond=None)[0] # coeff
     muT = mu.T # intermediate var
     Sigma = np.diag(np.ones(p)) * (1 - p/N)/(yTy + muT@KTy)[0][0]
 
