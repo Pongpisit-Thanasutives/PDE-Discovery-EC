@@ -29,7 +29,8 @@ def log_evidence(X_full, y, effective_indices=None, v=1/2, k=3, standardize=Fals
     A = KT@K + Sigma
     A_inv = np.linalg.pinv(A)
     b = KTy + Smu
-    xi = yTy + muT@Smu - b.T@(A_inv@b)
+    posterior_mean = A_inv@b
+    xi = yTy + muT@Smu - b.T@posterior_mean
     xi = xi[0][0]
     
     return N*((np.linalg.slogdet(Sigma)[1] - np.linalg.slogdet(A)[1])/(2*N) - 0.5*np.log(2*np.pi) - \
