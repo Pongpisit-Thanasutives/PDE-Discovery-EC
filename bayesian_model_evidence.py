@@ -6,6 +6,7 @@ def log_evidence(X_full, y, effective_indices=None, v=1/2, k=3, standardize=Fals
 
     if standardize:
         k = 1 + 1/v
+        X_full = (X_full-X_full.mean(axis=0))/X_full.std(axis=0)
         y = (y - y.mean())/y.std()
 
     if effective_indices is not None:
@@ -28,7 +29,8 @@ def log_evidence(X_full, y, effective_indices=None, v=1/2, k=3, standardize=Fals
     A = KT@K + Sigma
     A_inv = np.linalg.pinv(A)
     b = KTy + Smu
-    xi = (yTy + muT@Smu - b.T@(A_inv@b))[0][0]
+    xi = yTy + muT@Smu - b.T@(A_inv@b)
+    xi = xi[0][0]
     
     return N*((np.linalg.slogdet(Sigma)[1] - np.linalg.slogdet(A)[1])/(2*N) - 0.5*np.log(2*np.pi) - \
               (0.5 + k/N)*np.log(xi/2 + 1/v) - (k*np.log(v))/N + (loggamma(N/2 + k) - loggamma(k))/N)
