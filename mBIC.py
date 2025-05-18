@@ -32,7 +32,7 @@ def mbic(loglik, k, n, p, const=4):
         raise ValueError("Invalid input: ensure n > 0, k >= 0, p > 0, p/const > 1, and p/k >= 1")
     return bic(loglik, k, n) + 2 * k * math.log(p / const - 1)
 
-def MBIC(X, y, num_all_vars=None, const=4)
+def MBIC(X, y, num_all_vars=None, const=4):
     model = sm.OLS(y, X)
     result = model.fit()
     loglik = model.loglike(result.params)
@@ -70,7 +70,7 @@ def mbic2(loglik, k, n, p, const=4):
 
     return mbic(loglik, k, n, p, const) - penalty
 
-def MBIC2(X, y, num_all_vars=None, const=4)
+def MBIC2(X, y, num_all_vars=None, const=4):
     model = sm.OLS(y, X)
     result = model.fit()
     loglik = model.loglike(result.params)
@@ -97,7 +97,7 @@ def ebic(loglik, k, n, p, const=0):
     '''
     return bic(loglik, k, n) + 2 * (1-const) * math.log(math.comb(p, k))
 
-def EBIC(X, y, num_all_vars=None, const=0)
+def EBIC(X, y, num_all_vars=None, const=0):
     model = sm.OLS(y, X)
     result = model.fit()
     loglik = model.loglike(result.params)
