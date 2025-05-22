@@ -1,12 +1,9 @@
 from parametric_si import parametric_sfs_si
 from func_timeout import func_timeout, FunctionTimedOut
 
-def func_with_timeout(func, args, timeout=1):
+def sfs_si(timeout, *args, **kwargs):
     try:
-        return func_timeout(timeout, func, args=args)
+        return func_timeout(timeout, func=parametric_sfs_si, args=args, kwargs=kwargs)
     except FunctionTimedOut:
         return None
-
-def sfs_si(timeout, *args):
-    return func_with_timeout(func=parametric_sfs_si, args=args, timeout=timeout)
 
