@@ -65,7 +65,7 @@ dependencies:
   - flake8=7.1.1=py310hca03da5_0
   - fonttools=4.55.3=py310h80987f9_0
   - frozenlist=1.5.0=py310h80987f9_0
-  - fsspec=2024.12.0=py310hca03da5_0
+  - fsspec=2025.3.2=py310hd096484_0
   - func_timeout=4.3.5=pyhd3eb1b0_0
   - future=1.0.0=py310hca03da5_0
   - gettext=0.21.0=hbdbcc25_2
@@ -272,11 +272,10 @@ dependencies:
   - scikit-image=0.25.2=py310h5936506_0
   - scikit-learn=1.6.1=py310h313beb8_0
   - scikit-sparse=0.4.14=py310he1f27a3_0
-  - scipy=1.15.2=py310h14fe6a6_1
   - scs=3.2.7.post2=default_py310h24cc7b1_0
   - seaborn=0.13.2=py310hca03da5_2
   - sip=6.7.12=py310h313beb8_1
-  - slicer=0.0.8=py310h33ce5c2_0
+  - slicer=0.0.8=py310h1e82210_1
   - snappy=1.2.1=h98b9ce2_1
   - snowballstemmer=2.2.0=pyhd3eb1b0_0
   - sortedcontainers=2.4.0=pyhd3eb1b0_0
@@ -303,7 +302,7 @@ dependencies:
   - tk=8.6.14=h6ba3021_0
   - tomli=2.0.1=py310hca03da5_0
   - tomlkit=0.13.2=py310hca03da5_0
-  - tornado=6.4.2=py310h80987f9_0
+  - tornado=6.5=py310h80987f9_0
   - tqdm=4.67.1=py310h33ce5c2_0
   - traitlets=5.14.3=py310hca03da5_0
   - typing-extensions=4.12.2=py310hca03da5_0
@@ -341,15 +340,17 @@ dependencies:
       - choldate==0.1.0
       - colour==0.1.5
       - cvxpy==1.6.5
-      - cython==3.0.12
+      - cython==3.1.0
       - derivative==0.6.3
       - dm-haiku==0.0.14
+      - dppy==0.3.3
       - el0ps==0.0.3
       - eli5==0.16.0
       - etils==1.12.0
       - filelock==3.18.0
       - findiff==0.12.1
       - flax==0.10.4
+      - fpsample==0.3.3
       - funcy==2.0
       - gpax==0.1.8
       - graphviz==0.20.3
@@ -398,10 +399,11 @@ dependencies:
       - optax==0.2.4
       - orbax-checkpoint==0.11.5
       - p-tqdm==1.4.2
+      - parametric-si==1.0.4
       - pillow==11.2.1
       - pip==25.1.1
       - pip-check==2.9
-      - psutil==7.0.0
+      - psutil==5.9.6
       - pybnb==0.6.2
       - pydmd==2025.5.1
       - pyhamcrest==2.1.0
@@ -413,11 +415,12 @@ dependencies:
       - rfpimp==1.3.7
       - rich==14.0.0
       - sage-importance==0.0.7
+      - scipy==1.15.3
       - semver==3.0.4
-      - setuptools==80.1.0
+      - setuptools==80.7.1
       - shap==0.47.2
       - si4pipeline==1.0.1
-      - sicore==2.5.0
+      - sicore==2.6.0
       - simplejson==3.20.1
       - six==1.16.0
       - skscope==0.1.8
