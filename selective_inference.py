@@ -24,3 +24,9 @@ def forward_stop_rule(p_values, alpha=1.0):
     stop_at = max(np.where(fdr <= alpha)[0])
     return stop_at, fdr
 
+def bonferroni_correction(alpha, n_tests):
+    return alpha/n_tests
+
+def sidak_correction(alpha, n_tests):
+    return 1-((1-alpha)**n_tests)
+
