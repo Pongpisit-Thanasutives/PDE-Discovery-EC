@@ -76,6 +76,16 @@ def distribute_order(n_poly, n_vars):
         out.extend(sorted(distribution, reverse=True))
     return out
 
+def biggest_superset(sets_list):
+    max_superset = None
+    max_count = 0
+    for s in sets_list:
+        count = sum(1 for other in sets_list if other.issubset(s))
+        if count > max_count:
+            max_count = count
+            max_superset = s
+    return max_superset
+
 def sci_format(n):
     sf = '%.2E' % Decimal(n)
     sf = sf.split('E')
@@ -101,6 +111,14 @@ def shap_linear_importance(X_pre, y_pre, scale=True, full=False):
         if scale:
             feature_importance = feature_importance/feature_importance.sum()
     return feature_importance
+
+def shap_model_selection(X_pre, y_pre, threshold=0.99):
+    full_importance_values = shap_linear_importance(X_pre, y_pre, scale=False, full=True)
+    importance_values = abs(full_importance_values).mean(axis=0)
+    importance_values = importance_values/importance_values.sum()
+    importance_ranking = np.argsort(-importance_values)
+    importance_ranking = importance_ranking[:np.searchsorted(np.cumsum(importance_values[importance_ranking]), threshold)+1]
+    return importance_ranking, full_importance_values[:, importance_ranking]
 
 def sage_linear_importance(X_pre, y_pre):
     imputer = sage.MarginalImputer(linear_model.LinearRegression(fit_intercept=False).fit(X_pre, y_pre), X_pre)
