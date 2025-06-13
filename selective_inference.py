@@ -14,7 +14,7 @@ def stepwise_selective_inference(support_size) -> PipelineManager:
 
 def subset_fdr(p_values):
     fdr = -np.mean(np.log(1-np.array(p_values)))
-    return fdr
+    return abs(fdr)
 
 def forward_stop_rule(p_values, alpha=1.0):
     fdr = np.log(1-np.array(p_values))
