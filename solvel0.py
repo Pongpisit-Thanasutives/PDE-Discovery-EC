@@ -94,7 +94,7 @@ def miqp2(features, response, non_zero, alpha=0, verbose=False):
     return coeff
 
 # Without an intercept + MIOSR implementation
-def miqp3(features, response, non_zero, alpha=0, verbose=False):
+def MIOSR(features, response, non_zero, alpha=0, verbose=False):
     """
     Deploy and optimize SOS-1 formulated MIO-SINDy
     """
@@ -142,7 +142,7 @@ def solvel0(X_pre, y_pre, is_normal=False, intercept=False, miosr=False, refine=
             if not miosr:
                 beta = miqp2(X_pre, y_pre.flatten(), i)
             else:
-                beta = miqp3(X_pre, y_pre.flatten(), i)
+                beta = MIOSR(X_pre, y_pre.flatten(), i)
         effective_indices = tuple(np.where(np.abs(beta)>0)[0])
         if i == X_pre.shape[1]:
             effective_indices = tuple(range(X_pre.shape[1]))
