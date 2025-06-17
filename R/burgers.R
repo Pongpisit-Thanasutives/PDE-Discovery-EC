@@ -56,6 +56,6 @@ for (alpha in alphas) {
 plot(alphas, steps, yaxt="n", xlab="alpha")
 axis(2, at = unique(steps))
 
-save_file = "fsInf_burgers_noise50.rds"
+save_file = "./R_data/fsInf_burgers_noise50.rds"
 saveRDS(out_fs, file = save_file)
 readRDS(save_file)

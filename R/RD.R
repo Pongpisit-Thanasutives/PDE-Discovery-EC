@@ -50,6 +50,7 @@ for (alpha in alphas) {
 plot(alphas, steps, yaxt="n", xlab="alpha")
 axis(2, at = unique(steps))
 
-save_file = "fsInf_RD_v.rds"
+save_file = "./R_data/fsInf_RD_v.rds"
 saveRDS(out_fs, file = save_file)
 readRDS(save_file)
+
