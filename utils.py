@@ -15,6 +15,14 @@ try:
 except ImportError:
     print("sage is not installed to the environment.")
 
+import yaml
+
+def read_yaml(file_path):
+    with open(file_path) as f:
+        content = yaml.safe_load(f)
+    f.close()
+    return content
+
 def knee(x, y, S=0.95, interp_method='linear', degree=7, direction='decreasing'):
     if direction == 'decreasing':
         curve = 'convex'
