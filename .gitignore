@@ -1,5 +1,7 @@
 .DS_store
 anaconda_projects/
+Ke/
+Old/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

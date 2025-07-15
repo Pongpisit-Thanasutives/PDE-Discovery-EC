@@ -6,7 +6,7 @@ channels:
 dependencies:
   - about-time=4.2.1=pyhd8ed1ab_1
   - alive-progress=3.2.0=pyhd8ed1ab_0
-  - appnope=0.1.2=py310hca03da5_1001
+  - appnope=0.1.4=py310hca03da5_0
   - asttokens=3.0.0=py310hca03da5_0
   - autograd=1.7.0=pyhd8ed1ab_1
   - blas=1.0=openblas
@@ -19,19 +19,18 @@ dependencies:
   - ca-certificates=2025.2.25=hca03da5_0
   - cairo=1.16.0=hd886ae0_6
   - clarabel=0.10.0=py310h44782b3_0
-  - cloudpickle=3.0.0=py310hca03da5_0
+  - cloudpickle=3.1.1=py310hca03da5_0
   - cma=3.2.2=pyh050c7b8_0
   - comm=0.2.1=py310hca03da5_0
   - contourpy=1.3.2=py310h7f4e7e6_0
   - cvxpy=1.5.3=py310hb6292c7_0
   - cvxpy-base=1.5.3=py310h2216879_0
   - cycler=0.12.1=pyhd8ed1ab_1
-  - cython=3.0.11=py310h80987f9_1
+  - cython=3.0.12=py310h80987f9_0
   - debugpy=1.8.11=py310h313beb8_0
   - decorator=5.1.1=pyhd3eb1b0_0
   - deprecated=1.2.18=pyhd8ed1ab_0
   - dowhy=0.7.1=pyhd8ed1ab_0
-  - econml=0.15.1=py310hbf0473f_0
   - ecos=2.0.14=py310hae04be4_1
   - exceptiongroup=1.2.0=py310hca03da5_0
   - executing=0.8.3=pyhd3eb1b0_0
@@ -47,11 +46,12 @@ dependencies:
   - freetype=2.13.3=h47d26ad_0
   - fribidi=1.0.10=h1a28f6b_0
   - func_timeout=4.3.5=pyhd8ed1ab_1
+  - future=1.0.0=py310hca03da5_0
   - gdk-pixbuf=2.42.10=h969f7ef_2
   - gettext=0.21.0=hbdbcc25_2
   - giflib=5.2.2=h80987f9_0
-  - glib=2.78.4=h313beb8_0
-  - glib-tools=2.78.4=h313beb8_0
+  - glib=2.84.2=hc880cf1_0
+  - glib-tools=2.84.2=hc880cf1_0
   - gmp=6.3.0=h313beb8_0
   - gmpy2=2.2.1=py310h5c1b81f_0
   - grapheme=0.6.0=pyhd8ed1ab_1
@@ -69,10 +69,10 @@ dependencies:
   - joblib=1.4.2=py310hca03da5_0
   - jpeg=9e=h80987f9_3
   - jupyter_client=8.6.3=py310hca03da5_0
-  - jupyter_core=5.7.2=py310hca03da5_0
-  - jupyterlab_widgets=3.0.14=pyhd8ed1ab_0
+  - jupyter_core=5.8.1=py310hca03da5_0
+  - jupyterlab_widgets=3.0.15=py310hca03da5_0
   - kiwisolver=1.4.8=py310h313beb8_0
-  - krb5=1.20.1=hf3e1bf2_1
+  - krb5=1.21.3=hf3e1bf2_0
   - lazy_loader=0.4=py310hca03da5_0
   - lcms2=2.16=he26ebf3_1
   - lerc=4.0.0=h313beb8_0
@@ -80,7 +80,7 @@ dependencies:
   - libbrotlicommon=1.1.0=hd74edd7_2
   - libbrotlidec=1.1.0=hd74edd7_2
   - libbrotlienc=1.1.0=hd74edd7_2
-  - libcurl=8.12.1=hde089ae_0
+  - libcurl=8.14.1=hb586df2_0
   - libcxx=20.1.3=ha82da77_0
   - libdeflate=1.22=h80987f9_0
   - libedit=3.1.20230828=h80987f9_0
@@ -89,7 +89,7 @@ dependencies:
   - libgd=2.3.3=hd3b0a14_4
   - libgfortran=5.0.0=11_3_0_hca03da5_28
   - libgfortran5=11.3.0=h009349e_28
-  - libglib=2.78.4=h0a96307_0
+  - libglib=2.84.2=hdc2269c_0
   - libiconv=1.16=h80987f9_3
   - libnghttp2=1.57.0=h62f6fdd_0
   - libopenblas=0.3.29=hea593b9_0
@@ -107,7 +107,7 @@ dependencies:
   - libxml2=2.13.8=h0b34f26_0
   - libzlib=1.2.13=hfb2fe0b_6
   - lightgbm=4.6.0=py310h313beb8_0
-  - llvm-openmp=14.0.6=hc6e5704_0
+  - llvm-openmp=17.0.6=h2f17746_0
   - llvmlite=0.44.0=py310heb35c27_1
   - lz4-c=1.9.4=h313beb8_1
   - matplotlib=3.10.1=py310hb6292c7_0
@@ -122,10 +122,11 @@ dependencies:
   - networkx=3.4.2=py310hca03da5_0
   - nspr=4.35=h313beb8_0
   - nss=3.89.1=h313beb8_0
-  - numba=0.61.0=py310h313beb8_1
-  - numexpr=2.10.1=py310h5d9532f_0
+  - numba=0.61.2=py310h32e2601_0
+  - numexpr=2.11.0=py310h8c72970_0
   - numpy=1.26.4=py310h3b2db8e_0
   - numpy-base=1.26.4=py310ha9811e2_0
+  - numpy-indexed=0.3.7=pyhd8ed1ab_0
   - openjpeg=2.5.2=hba36e21_1
   - openssl=3.0.16=h02f6b3c_0
   - osqp=0.6.7.post3=py310h3420790_1
@@ -135,7 +136,6 @@ dependencies:
   - parso=0.8.4=py310hca03da5_0
   - patsy=1.0.1=py310hca03da5_0
   - pcre2=10.42=hb066dcc_1
-  - pexpect=4.8.0=pyhd3eb1b0_3
   - pip=25.1=pyhc872135_2
   - pixman=0.40.0=h1a28f6b_0
   - platformdirs=4.3.7=py310hca03da5_0
@@ -158,7 +158,7 @@ dependencies:
   - python-graphviz=0.20.1=py310hca03da5_1
   - python-tzdata=2025.2=pyhd3eb1b0_0
   - python_abi=3.10=6_cp310
-  - pytz=2024.1=py310hca03da5_0
+  - pytz=2025.2=py310hca03da5_0
   - pyzmq=26.2.0=py310h313beb8_0
   - qdldl-python=0.1.7.post5=np20py310h51fdda9_1
   - qhull=2020.2=h420ef59_5
@@ -189,7 +189,6 @@ dependencies:
   - typing_extensions=4.12.2=py310hca03da5_0
   - tzdata=2025b=h04d1e81_0
   - unicodedata2=16.0.0=py310h078409c_0
-  - wcwidth=0.2.5=pyhd3eb1b0_0
   - wheel=0.45.1=py310hca03da5_0
   - widgetsnbextension=4.0.14=pyhd8ed1ab_0
   - wrapt=1.17.2=py310h078409c_0
@@ -221,6 +220,7 @@ dependencies:
       - dm-haiku==0.0.14
       - dppy==0.3.3
       - dunamai==1.19.2
+      - econml==0.16.0
       - etils==1.12.2
       - filelock==3.18.0
       - flax==0.10.4
@@ -257,13 +257,14 @@ dependencies:
       - optax==0.2.4
       - orbax-checkpoint==0.9.1
       - parametric-si==1.0.4
+      - pexpect==4.8.0
       - pillow==10.4.0
       - preshed==3.0.9
       - protobuf==6.30.2
       - pydantic==2.11.4
       - pydantic-core==2.33.2
       - pymcdm==1.3.1
-      - pysindy==2.0.0rc3.dev0+g56676d9.d20250417
+      - pysindy==1.7.6.dev523+g04f2dc2
       - pywavelets==1.8.0
       - pyyaml==6.0.2
       - regex==2024.11.6
@@ -272,12 +273,12 @@ dependencies:
       - rich==14.0.0
       - safetensors==0.5.3
       - scikit-image==0.22.0
-      - shap==0.43.0
+      - shap==0.48.0
       - shellingham==1.5.4
       - si4pipeline==1.0.1
       - sicore==2.6.0
       - simplejson==3.20.1
-      - slicer==0.0.7
+      - slicer==0.0.8
       - smart-open==7.1.0
       - spacy==3.7.5
       - spacy-legacy==3.0.12
@@ -294,6 +295,7 @@ dependencies:
       - typing-inspection==0.4.0
       - urllib3==2.4.0
       - wasabi==1.1.3
+      - wcwidth==0.2.5
       - weasel==0.4.1
       - zipp==3.21.0
 prefix: /opt/anaconda3/envs/econ
