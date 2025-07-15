@@ -94,8 +94,11 @@ def biggest_superset(sets_list):
             max_superset = s
     return max_superset
 
-def MSE(arr1, arr2):
-    return ((arr1-arr2)**2).mean()
+def MSE(arr1, arr2=None):
+    D = arr1
+    if arr2 is not None:
+        D = D - arr2
+    return (D**2).mean()
 
 def sci_format(n):
     sf = '%.2E' % Decimal(n)
