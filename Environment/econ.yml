@@ -139,7 +139,7 @@ dependencies:
   - pip=25.1=pyhc872135_2
   - pixman=0.40.0=h1a28f6b_0
   - platformdirs=4.3.7=py310hca03da5_0
-  - poppler=24.09.0=hb57d120_2
+  - poppler=24.09.0=hba2596d_3
   - poppler-data=0.4.11=hca03da5_1
   - portion=2.5.0=pyhd8ed1ab_0
   - prompt-toolkit=3.0.43=py310hca03da5_0
@@ -173,7 +173,7 @@ dependencies:
   - six=1.17.0=py310hca03da5_0
   - sortedcontainers=2.4.0=pyhd8ed1ab_1
   - sparse=0.15.4=py310hca03da5_0
-  - sqlite=3.45.3=h80987f9_0
+  - sqlite=3.50.2=h79febb2_1
   - stack_data=0.2.0=pyhd3eb1b0_0
   - statsmodels=0.14.4=py310h80987f9_0
   - sympy=1.13.3=py310hca03da5_1
