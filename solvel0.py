@@ -159,6 +159,6 @@ def solvel0(X_pre, y_pre, is_normal=False, intercept=False, miosr=False, refine=
     return best_subsets
 
 def refine_solvel0(out, dataset, ic_type='bic', verbose=False):
-    st = backward_refinement(out, dataset, mode='rfe', ic_type=ic_type, verbose=verbose)
+    st = backward_refinement(out, dataset, mode='RFE_PLinearRegression', ic_type=ic_type, verbose=verbose)
     st += backward_refinement(out, dataset, mode='SelectKBest', ic_type=ic_type, verbose=verbose)
     return st

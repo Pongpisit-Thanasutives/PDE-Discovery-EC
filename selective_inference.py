@@ -1,6 +1,9 @@
 import numpy as np
 from func_timeout import func_timeout, FunctionTimedOut
-from parametric_si import parametric_sfs_si
+try:
+    from parametric_si import parametric_sfs_si
+except ImportError:
+    print("parametric_si (https://github.com/takeuchi-lab/parametric-si) is not installed.")
 from si4pipeline import (construct_pipelines, initialize_dataset, stepwise_feature_selection, PipelineManager)
 
 def sfs_si(timeout, *args, **kwargs):

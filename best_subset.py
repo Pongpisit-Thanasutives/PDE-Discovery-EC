@@ -22,7 +22,6 @@ except ImportError:
 
 from functools import lru_cache, reduce
 from func_timeout import func_timeout, func_set_timeout, FunctionTimedOut
-from rapidfuzz import fuzz
 from statsmodels.tools.eval_measures import aicc as sm_aicc
 from statsmodels.tools.eval_measures import hqic as sm_hqic
     
@@ -114,8 +113,7 @@ def p_regression(X, y):
 
 def backward_refinement(feature_hierarchy, dataset, mode="SelectKBest", ic_type="bic", sk_normalize_axis=0, verbose=False):
     XX, yy = dataset
-    mode = np.argmax([fuzz.ratio(mode.lower(), m) for m in ['selectkbest', 'rfe', 'mrmr']])
-    if verbose: print(['SelectKBest', 'RFE_PLinearRegression', 'mrmr_regression'][mode])
+    mode = ['SelectKBest', 'RFE_PLinearRegression', 'mrmr_regression'].index(mode)
     score_track = ScoreTracker({})
     history = set()
     for init_features in feature_hierarchy:
