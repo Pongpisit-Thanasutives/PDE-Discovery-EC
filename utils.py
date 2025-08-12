@@ -9,11 +9,6 @@ from kneed import KneeLocator
 from kneefinder import KneeFinder
 
 import shap
-try:
-    # No need to import it if sage_linear_importance would never be called.
-    import sage
-except ImportError:
-    print("sage is not installed to the environment.")
 
 import yaml
 
@@ -133,11 +128,6 @@ def shap_model_selection(X_pre, y_pre, threshold=0.99):
     importance_ranking = np.argsort(-importance_values)
     importance_ranking = importance_ranking[:np.searchsorted(np.cumsum(importance_values[importance_ranking]), threshold)+1]
     return importance_ranking, full_importance_values[:, importance_ranking]
-
-def sage_linear_importance(X_pre, y_pre):
-    imputer = sage.MarginalImputer(linear_model.LinearRegression(fit_intercept=False).fit(X_pre, y_pre), X_pre)
-    estimator = sage.PermutationEstimator(imputer, 'mse')
-    return estimator(X_pre_top, y_pre)
 
 def extract_unique_candidates(pareto_optimal_models):
     unique_candidates = frozenset()
