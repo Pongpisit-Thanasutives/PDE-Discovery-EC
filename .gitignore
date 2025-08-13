@@ -1,7 +1,12 @@
+# No need
 .DS_store
 anaconda_projects/
 Ke/
 Old/
+# Large files
+Cache/X_poly_NS.npy
+Cache/y_poly_NS.npy
+Cache/feature_names_poly_NS.npy
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
