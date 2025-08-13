@@ -5,4 +5,5 @@ Default for EC: DNSGA2, Faster: SMSEMOA
 
 Main environment: ./Environment/sindy.yml
 
-Install knockpy at https://github.com/Pongpisit-Thanasutives/knockpy
+Install knockpy at https://github.com/Pongpisit-Thanasutives/knockpy and hidimstat at https://github.com/mind-INRIA/hidimstat
+
