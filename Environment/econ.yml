@@ -1,8 +1,8 @@
 name: econ
 channels:
-  - gurobi
   - conda-forge
   - defaults
+  - gurobi
 dependencies:
   - about-time=4.2.1=pyhd8ed1ab_1
   - alive-progress=3.2.0=pyhd8ed1ab_0
@@ -16,7 +16,7 @@ dependencies:
   - brotli-bin=1.1.0=hd74edd7_2
   - bzip2=1.0.8=h80987f9_6
   - c-ares=1.19.1=h80987f9_0
-  - ca-certificates=2025.2.25=hca03da5_0
+  - ca-certificates=2025.7.15=hca03da5_0
   - cairo=1.16.0=hd886ae0_6
   - clarabel=0.10.0=py310h44782b3_0
   - cloudpickle=3.1.1=py310hca03da5_0
@@ -66,13 +66,12 @@ dependencies:
   - ipython=8.30.0=py310hca03da5_0
   - ipywidgets=8.1.6=pyhd8ed1ab_0
   - jedi=0.19.2=py310hca03da5_0
-  - joblib=1.4.2=py310hca03da5_0
+  - joblib=1.5.1=py310hca03da5_0
   - jpeg=9e=h80987f9_3
   - jupyter_client=8.6.3=py310hca03da5_0
   - jupyter_core=5.8.1=py310hca03da5_0
   - jupyterlab_widgets=3.0.15=py310hca03da5_0
   - kiwisolver=1.4.8=py310h313beb8_0
-  - krb5=1.21.3=h7414a1f_1
   - lazy_loader=0.4=py310hca03da5_0
   - lcms2=2.16=he26ebf3_1
   - lerc=4.0.0=h313beb8_0
@@ -80,10 +79,9 @@ dependencies:
   - libbrotlicommon=1.1.0=hd74edd7_2
   - libbrotlidec=1.1.0=hd74edd7_2
   - libbrotlienc=1.1.0=hd74edd7_2
-  - libcurl=8.14.1=hb586df2_0
+  - libcurl=8.14.1=hcdd2897_1
   - libcxx=20.1.3=ha82da77_0
   - libdeflate=1.22=h80987f9_0
-  - libedit=3.1.20230828=h80987f9_0
   - libev=4.33=h1a28f6b_1
   - libffi=3.4.4=hca03da5_1
   - libgd=2.3.3=hd3b0a14_4
@@ -117,7 +115,7 @@ dependencies:
   - mpfr=4.2.1=h80987f9_0
   - mpmath=1.3.0=py310hca03da5_0
   - munkres=1.1.4=pyh9f0ad1d_0
-  - ncurses=6.4=h313beb8_0
+  - ncurses=6.5=hee39554_0
   - nest-asyncio=1.6.0=py310hca03da5_0
   - networkx=3.4.2=py310hca03da5_0
   - nspr=4.35=h313beb8_0
@@ -128,9 +126,9 @@ dependencies:
   - numpy-base=1.26.4=py310ha9811e2_0
   - numpy-indexed=0.3.7=pyhd8ed1ab_0
   - openjpeg=2.5.2=hba36e21_1
-  - openssl=3.0.16=h02f6b3c_0
+  - openssl=3.0.17=h4ee41c1_0
   - osqp=0.6.7.post3=py310h3420790_1
-  - packaging=24.2=py310hca03da5_0
+  - packaging=25.0=py310hca03da5_0
   - pandas=2.3.1=py310h43d6402_0
   - pango=1.50.7=hf2328af_2
   - parso=0.8.4=py310hca03da5_0
@@ -164,9 +162,9 @@ dependencies:
   - qhull=2020.2=h420ef59_5
   - rapidfuzz=3.13.0=py310h853098b_0
   - rdata=0.11.2=pyhd8ed1ab_1
-  - readline=8.2=h1a28f6b_0
+  - readline=8.3=h0b18652_0
   - scienceplots=2.1.1=pyhd8ed1ab_1
-  - scikit-learn=1.6.1=py310h313beb8_0
+  - scikit-learn=1.7.1=py310h6e33161_0
   - scipy=1.15.3=py310hb81b3df_0
   - scs=3.2.3=py310hbda83bc_0
   - setuptools=78.1.1=py310hca03da5_0
@@ -175,7 +173,7 @@ dependencies:
   - sparse=0.15.4=py310hca03da5_0
   - sqlite=3.50.2=h79febb2_1
   - stack_data=0.2.0=pyhd3eb1b0_0
-  - statsmodels=0.14.4=py310h80987f9_0
+  - statsmodels=0.14.5=py310h12bd487_0
   - sympy=1.13.3=py310hca03da5_1
   - tabulate=0.9.0=pyhd8ed1ab_2
   - tbb=2021.8.0=h48ca7d4_0
