@@ -14,9 +14,9 @@ dependencies:
   - brotli=1.1.0=hd74edd7_2
   - brotli-bin=1.1.0=hd74edd7_2
   - bzip2=1.0.8=h80987f9_6
-  - c-ares=1.19.1=h80987f9_0
+  - c-ares=1.34.5=h2ca31fc_0
   - ca-certificates=2025.7.15=hca03da5_0
-  - cairo=1.16.0=h191e429_7
+  - cairo=1.18.4=h191e429_0
   - clarabel=0.10.0=py310h44782b3_0
   - cloudpickle=3.1.1=py310hca03da5_0
   - cma=3.2.2=pyh050c7b8_0
@@ -25,7 +25,7 @@ dependencies:
   - cvxpy=1.5.3=py310hb6292c7_0
   - cvxpy-base=1.5.3=py310h2216879_0
   - cycler=0.12.1=pyhd8ed1ab_1
-  - cython=3.0.12=py310h80987f9_0
+  - cython=3.1.3=py310h79febb2_0
   - debugpy=1.8.11=py310h313beb8_0
   - decorator=5.1.1=pyhd3eb1b0_0
   - deprecated=1.2.18=pyhd8ed1ab_0
@@ -79,7 +79,7 @@ dependencies:
   - libbrotlidec=1.1.0=hd74edd7_2
   - libbrotlienc=1.1.0=hd74edd7_2
   - libcurl=8.14.1=hcdd2897_1
-  - libcxx=20.1.3=ha82da77_0
+  - libcxx=20.1.8=h8869778_0
   - libdeflate=1.22=h80987f9_0
   - libev=4.33=h1a28f6b_1
   - libffi=3.4.4=hca03da5_1
@@ -104,7 +104,7 @@ dependencies:
   - libxml2=2.13.8=h0b34f26_0
   - libzlib=1.2.13=hfb2fe0b_6
   - lightgbm=4.6.0=py310h313beb8_0
-  - llvm-openmp=19.1.7=h3b2fb71_2
+  - llvm-openmp=20.1.8=he822017_0
   - llvmlite=0.44.0=py310heb35c27_1
   - lz4-c=1.9.4=h313beb8_1
   - matplotlib=3.10.1=py310hb6292c7_0
@@ -182,8 +182,8 @@ dependencies:
   - tornado=6.5.1=py310h80987f9_0
   - tqdm=4.67.1=py310h33ce5c2_0
   - traitlets=5.14.3=py310hca03da5_0
-  - typing-extensions=4.12.2=py310hca03da5_0
-  - typing_extensions=4.12.2=py310hca03da5_0
+  - typing-extensions=4.15.0=py310hca03da5_0
+  - typing_extensions=4.15.0=py310hca03da5_0
   - tzdata=2025b=h04d1e81_0
   - unicodedata2=16.0.0=py310h078409c_0
   - wheel=0.45.1=py310hca03da5_0
