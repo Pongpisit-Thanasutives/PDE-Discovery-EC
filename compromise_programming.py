@@ -36,11 +36,10 @@ def compromise_programming(
         F[:, 0:1] = getattr(normalizations, bic_normalization)(F[:, 0:1])
 
     types = np.array([+1, -1])
-    ranks = mcdm(F, obj_weights, types)
-    ranks = Counter(np.argmin(ranks, axis=1)).most_common()
-    balance_point = F[ranks[0][0]]
+    ranks, prefs = mcdm(F, obj_weights, types)
+    balance_point, most_common = ranks2decision(ranks)
 
-    return balance_point, ranks
+    return F[balance_point], most_common, ranks, prefs
 
 
 def mcdm(F, obj_weights, types):
@@ -52,5 +51,17 @@ def mcdm(F, obj_weights, types):
     # print("method_names:", method_names)
     methods = [TOPSIS(), MABAC(), COMET(cvalues, expert_function), SPOTIS(bounds)]
 
-    ranks = [method.rank(method(F, obj_weights, types)) for method in methods]
-    return ranks
+    prefs = []
+    ranks = []
+    for method in methods:
+        pref = method(F, obj_weights, types)
+        prefs.append(pref)
+        ranks.append(method.rank(pref))
+
+    return ranks, prefs
+
+
+def ranks2decision(ranks):
+    most_common = Counter(np.argmin(ranks, axis=1)).most_common()
+    balance_point = most_common[0][0]
+    return balance_point, most_common
