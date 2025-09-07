@@ -57,6 +57,10 @@ def knee_finder(y, decreasing=False):
 def colvec(arr):
     return arr.reshape(-1, 1)
 
+def normalize_lp(arr, p=2, axis=0):
+    arr_norm = np.linalg.norm(arr, p, axis=axis)
+    return arr/arr_norm, arr_norm
+
 def select_column(arr, idx):
     assert len(arr.shape) == 2
     return arr[:, idx:idx+1]
