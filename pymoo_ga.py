@@ -7,6 +7,27 @@ from pymoo.core.mutation import Mutation
 from pymoo.core.duplicate import ElementwiseDuplicateElimination
 
 
+def Ridge(X, y, lam=0):
+    X = np.asarray(X)
+    y = np.asarray(y)
+    n, d = X.shape
+    lam = abs(lam)
+
+    if lam != 0:
+        # Solve (X^T X + lambda * I) beta = X^T y
+        A = X.T @ X + lam * np.eye(d)
+        b = X.T @ y
+        coeff = np.linalg.solve(A, b)
+    else:
+        # Use least squares solver
+        coeff, residuals, _, _ = np.linalg.lstsq(X, y, rcond=None)
+
+    # Compute error manually (squared error)
+    error = np.sum((y - X @ coeff) ** 2)
+
+    return coeff, error
+
+
 class PdeDiscoveryProblem(ElementwiseProblem):
     def __init__(
         self,
@@ -16,6 +37,7 @@ class PdeDiscoveryProblem(ElementwiseProblem):
         base_features,
         u_t,
         order_complexity=False,
+        ridge_lambda=0,
         **kwargs
     ):
         super().__init__(n_var=1, n_obj=2, n_ieq_constr=0, **kwargs)
@@ -26,6 +48,7 @@ class PdeDiscoveryProblem(ElementwiseProblem):
         self.u_t = u_t
         self.sample_size = np.prod(self.u_t.shape)
         self.order_complexity = order_complexity
+        self.ridge_lambda = ridge_lambda
 
     def _evaluate(self, X, out, *args, **kwargs):
         genome = X[0]
@@ -44,8 +67,8 @@ class PdeDiscoveryProblem(ElementwiseProblem):
     def compute_genome_coefficient(self, genome):
         features = self.numericalize_genome(genome)
         features = features.reshape(-1, features.shape[-1])
-        coeff, error, _, _ = np.linalg.lstsq(features, self.u_t, rcond=None)
-        return coeff, error[0]
+        coeff, error = Ridge(features, self.u_t, self.ridge_lambda)
+        return coeff, error
 
     def generate_module(self):
         return (random.randint(0, self.n_poly), random.randint(0, self.n_derivatives))
