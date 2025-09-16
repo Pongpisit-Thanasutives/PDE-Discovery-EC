@@ -24,7 +24,7 @@ dependencies:
   - babel=2.16.0=py310hca03da5_0
   - backports.tarfile=1.2.0=py310hca03da5_0
   - bcrypt=4.3.0=py310h2aea54e_0
-  - beautifulsoup4=4.13.4=py310hca03da5_0
+  - beautifulsoup4=4.13.5=py310hca03da5_0
   - binaryornot=0.4.4=pyhd3eb1b0_1
   - blas=1.0=openblas
   - bleach=6.2.0=py310hca03da5_0
@@ -33,7 +33,7 @@ dependencies:
   - brotlicffi=1.0.9.2=py310h313beb8_1
   - bzip2=1.0.8=h80987f9_6
   - c-ares=1.34.5=h2ca31fc_0
-  - ca-certificates=2025.7.15=hca03da5_0
+  - ca-certificates=2025.9.9=hca03da5_0
   - cachetools=5.5.1=py310hca03da5_0
   - cairo=1.18.4=h191e429_0
   - certifi=2025.8.3=py310hca03da5_0
@@ -41,7 +41,7 @@ dependencies:
   - cftime=1.6.4=py310hae04be4_1
   - chardet=5.2.0=py310hca03da5_0
   - charset-normalizer=3.3.2=pyhd3eb1b0_0
-  - clarabel=0.10.0=py310h44782b3_0
+  - clarabel=0.11.1=py310h2d1d3c2_0
   - click=8.2.1=py310hca03da5_0
   - cloudpickle=3.1.1=py310hca03da5_0
   - cma=3.2.2=pyh050c7b8_0
@@ -52,8 +52,7 @@ dependencies:
   - cycler=0.11.0=pyhd3eb1b0_0
   - cyrus-sasl=2.1.28=h0121217_3
   - dav1d=1.2.1=h80987f9_0
-  - debugpy=1.8.11=py310h313beb8_0
-  - decorator=5.1.1=pyhd3eb1b0_0
+  - debugpy=1.8.16=py310h0962b89_0
   - defusedxml=0.7.1=pyhd3eb1b0_0
   - deprecated=1.2.13=py310hca03da5_0
   - diff-match-patch=20200713=pyhd3eb1b0_0
@@ -62,7 +61,6 @@ dependencies:
   - docutils=0.21.2=py310hca03da5_0
   - ecos=2.0.14=py310hae04be4_1
   - exceptiongroup=1.2.0=py310hca03da5_0
-  - executing=0.8.3=pyhd3eb1b0_0
   - expat=2.7.1=h313beb8_0
   - flake8=7.1.1=py310hca03da5_0
   - fontconfig=2.14.1=h6402c1e_3
@@ -97,7 +95,7 @@ dependencies:
   - iniconfig=2.1.0=py310hca03da5_0
   - intervaltree=3.1.0=pyhd3eb1b0_0
   - ipopt=3.14.17=h945cc1c_2
-  - ipykernel=6.29.5=py310hca03da5_1
+  - ipykernel=6.30.1=py310hca03da5_0
   - isort=6.0.1=py310hca03da5_0
   - jaraco.classes=3.4.0=py310hca03da5_0
   - jaraco.context=6.0.0=py310hca03da5_0
@@ -105,7 +103,7 @@ dependencies:
   - jedi=0.19.2=py310hca03da5_0
   - jellyfish=1.1.3=py310h1bd1ac0_0
   - jinja2=3.1.6=py310hca03da5_0
-  - jpeg=9e=h80987f9_3
+  - jpeg=9f=h2f69dba_0
   - jsonschema=4.25.0=py310hca03da5_0
   - jsonschema-specifications=2023.7.1=py310hca03da5_0
   - jupyter_client=8.6.3=py310hca03da5_0
@@ -123,7 +121,7 @@ dependencies:
   - libblas=3.9.0=16_osxarm64_openblas
   - libclang=14.0.6=default_h1b80db6_2
   - libclang13=14.0.6=default_h24352ff_2
-  - libcurl=8.14.1=hcdd2897_1
+  - libcurl=8.15.0=hcdd2897_0
   - libcxx=20.1.8=h8869778_0
   - libdeflate=1.22=h80987f9_0
   - libedit=3.1.20230828=h80987f9_0
@@ -164,6 +162,7 @@ dependencies:
   - lmdb=0.9.31=h79febb2_0
   - lz4-c=1.9.4=h313beb8_1
   - markupsafe=3.0.2=py310h80987f9_0
+  - matplotlib-base=3.10.6=py310h066045a_0
   - mccabe=0.7.0=pyhd3eb1b0_0
   - metis=5.1.0=h15f6cfe_1007
   - mistune=3.1.2=py310hca03da5_0
@@ -201,9 +200,8 @@ dependencies:
   - openssl=3.5.0=h81ee809_0
   - osqp=0.6.7.post3=py310h3420790_1
   - packaging=25.0=py310hca03da5_0
-  - pandas=2.3.1=py310h43d6402_0
+  - pandas=2.3.2=py310h43d6402_0
   - pandoc=2.12=hca03da5_3
-  - pandocfilters=1.5.0=pyhd3eb1b0_0
   - parso=0.8.4=py310hca03da5_0
   - pathos=0.3.3=pyhd8ed1ab_1
   - pathspec=0.12.1=py310hca03da5_0
@@ -213,7 +211,7 @@ dependencies:
   - pillow=11.3.0=py310h6dd570d_0
   - pixman=0.46.4=h09dc60e_0
   - platformdirs=4.3.7=py310hca03da5_0
-  - plotly=6.0.1=pyhd8ed1ab_0
+  - plotly=6.3.0=py310hd096484_0
   - pluggy=1.5.0=py310hca03da5_0
   - ply=3.11=py310hca03da5_0
   - polars=1.22.0=py310hdcaa336_0
@@ -225,19 +223,18 @@ dependencies:
   - propcache=0.3.1=py310h80987f9_0
   - protobuf=5.29.3=py310h514c7bf_0
   - ptyprocess=0.7.0=pyhd3eb1b0_2
-  - pure_eval=0.2.2=pyhd3eb1b0_0
+  - pure_eval=0.2.3=py310hca03da5_0
   - pyasn1=0.6.1=py310hca03da5_0
   - pybind11=2.13.6=pyh1ec8472_2
   - pybind11-global=2.13.6=pyh415d2e4_2
   - pycares=4.10.0=py310h091efcb_0
   - pycodestyle=2.12.1=py310hca03da5_0
-  - pycparser=2.21=pyhd3eb1b0_0
   - pydocstyle=6.3.0=py310hca03da5_0
   - pyflakes=3.2.0=py310hca03da5_0
   - pygithub=2.4.0=py310hca03da5_0
   - pygments=2.19.1=py310hca03da5_0
   - pyjwt=2.10.1=py310hca03da5_0
-  - pylint=3.3.5=py310hca03da5_0
+  - pylint=3.3.8=py310hca03da5_0
   - pylint-venv=3.0.3=py310hca03da5_0
   - pyls-spyder=0.4.0=pyhd3eb1b0_0
   - pynacl=1.5.0=py310h80987f9_1
@@ -275,12 +272,12 @@ dependencies:
   - qt-webengine=5.15.9=h2903aaf_7
   - qtawesome=1.4.0=py310hca03da5_0
   - qtconsole=5.6.1=py310hca03da5_1
-  - qtpy=2.4.1=py310hca03da5_0
+  - qtpy=2.4.3=py310hca03da5_0
   - rapidfuzz=3.12.1=py310h853098b_0
   - rdata=0.11.2=pyhd8ed1ab_1
   - readline=8.3=h0b18652_0
   - referencing=0.30.2=py310hca03da5_0
-  - requests=2.32.4=py310hca03da5_0
+  - requests=2.32.5=py310hca03da5_0
   - requests-oauthlib=2.0.0=py310hca03da5_0
   - rope=1.13.0=py310hca03da5_0
   - rpds-py=0.22.3=py310h2aea54e_0
@@ -294,7 +291,6 @@ dependencies:
   - seaborn=0.13.2=py310hca03da5_3
   - sip=6.7.12=py310h313beb8_1
   - slicer=0.0.8=py310h1e82210_1
-  - snowballstemmer=2.2.0=pyhd3eb1b0_0
   - sortedcontainers=2.4.0=pyhd3eb1b0_0
   - soupsieve=2.5=py310hca03da5_0
   - sphinx=7.3.7=py310hca03da5_0
@@ -303,7 +299,7 @@ dependencies:
   - spyder=6.0.7=py310hca03da5_1
   - spyder-kernels=3.0.5=py310hd096484_0
   - sqlite=3.50.2=h79febb2_1
-  - stack_data=0.2.0=pyhd3eb1b0_0
+  - stack_data=0.6.3=py310hca03da5_0
   - statsmodels=0.14.5=py310h12bd487_0
   - suitesparse=5.10.1=h9223979_2
   - superqt=0.7.3=py310hd096484_0
@@ -334,7 +330,7 @@ dependencies:
   - whatthepatch=1.0.2=py310hca03da5_0
   - wheel=0.45.1=py310hca03da5_0
   - wrapt=1.17.0=py310h80987f9_0
-  - wurlitzer=3.0.2=py310hca03da5_0
+  - wurlitzer=3.1.1=py310hca03da5_0
   - xz=5.6.4=h80987f9_1
   - yaml=0.2.5=h1a28f6b_0
   - yapf=0.40.2=py310hca03da5_0
@@ -359,12 +355,14 @@ dependencies:
       - colour==0.1.5
       - cvxpy==1.7.1
       - cython==3.1.3
+      - decorator==5.1.1
       - derivative==0.6.3
       - dm-haiku==0.0.14
       - dppy==0.3.3
       - el0ps==0.0.3
       - eli5==0.16.0
       - etils==1.12.0
+      - executing==0.8.3
       - filelock==3.18.0
       - findiff==0.12.1
       - flax==0.10.4
@@ -418,13 +416,16 @@ dependencies:
       - optax==0.2.4
       - orbax-checkpoint==0.11.5
       - p-tqdm==1.4.2
+      - pandocfilters==1.5.0
       - parametric-si==1.0.4
       - pexpect==4.8.0
       - pip==25.2
       - pip-check==2.9
-      - psutil==7.0.0
+      - psutil==5.9.6
+      - pure-eval==0.2.2
       - pyasn1-modules==0.4.1
       - pybnb==0.6.2
+      - pycparser==2.21
       - pydmd==2025.5.1
       - pyhamcrest==2.1.0
       - pymcdm==1.3.1
@@ -439,18 +440,20 @@ dependencies:
       - sage-importance==0.0.7
       - scipy==1.15.3
       - semver==3.0.4
-      - setuptools==80.3.1
+      - setuptools==80.7.1
       - shap==0.48.0
       - si4pipeline==1.0.1
       - sicore==2.6.0
       - simplejson==3.20.1
       - six==1.16.0
       - skscope==0.1.8
+      - snowballstemmer==2.2.0
       - sparse-lm==0.5.3.dev25+g220cbba
       - sphinxcontrib-applehelp==1.0.2
       - sphinxcontrib-devhelp==1.0.2
       - sphinxcontrib-htmlhelp==2.0.0
       - sphinxcontrib-qthelp==1.0.3
+      - stack-data==0.2.0
       - stratx==0.5
       - symengine==0.14.0
       - sympy==1.14.0
