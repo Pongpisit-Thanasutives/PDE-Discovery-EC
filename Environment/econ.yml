@@ -91,7 +91,7 @@ dependencies:
   - libglib=2.84.2=hdc2269c_0
   - libiconv=1.16=h80987f9_3
   - libnghttp2=1.57.0=h62f6fdd_0
-  - libopenblas=0.3.29=hea593b9_0
+  - libopenblas=0.3.30=hf2bb037_0
   - libosqp=0.6.3=h5833ebf_1
   - libpng=1.6.39=h80987f9_0
   - libqdldl=0.1.7=hb7217d7_0
@@ -119,6 +119,7 @@ dependencies:
   - ncurses=6.5=hee39554_0
   - nest-asyncio=1.6.0=py310hca03da5_0
   - networkx=3.4.2=py310hca03da5_0
+  - nomkl=3.0=0
   - nspr=4.35=h313beb8_0
   - nss=3.89.1=h313beb8_0
   - numba=0.61.2=py310h32e2601_0
@@ -126,6 +127,8 @@ dependencies:
   - numpy=1.26.4=py310h901140f_1
   - numpy-base=1.26.4=py310hae06d03_1
   - numpy-indexed=0.3.7=pyhd8ed1ab_0
+  - openblas=0.3.30=hb03180a_0
+  - openblas-devel=0.3.30=h1465027_0
   - openjpeg=2.5.2=hba36e21_1
   - openssl=3.0.17=h4ee41c1_0
   - osqp=0.6.7.post3=py310h3420790_1
@@ -159,16 +162,16 @@ dependencies:
   - python-tzdata=2025.2=pyhd3eb1b0_0
   - python_abi=3.10=6_cp310
   - pytz=2025.2=py310hca03da5_0
-  - pyzmq=26.2.0=py310h313beb8_0
+  - pyzmq=27.1.0=py310h854a7ef_0
   - qdldl-python=0.1.7.post5=np20py310h51fdda9_1
   - rapidfuzz=3.13.0=py310h853098b_0
   - rdata=0.11.2=pyhd8ed1ab_1
   - readline=8.3=h0b18652_0
   - scienceplots=2.1.1=pyhd8ed1ab_1
-  - scikit-learn=1.7.1=py310h6e33161_0
+  - scikit-learn=1.6.1=py310h313beb8_0
   - scipy=1.15.3=py310hb81b3df_0
   - scs=3.2.3=py310hbda83bc_0
-  - setuptools=78.1.1=py310hca03da5_0
+  - setuptools=72.1.0=py310hca03da5_0
   - six=1.17.0=py310hca03da5_0
   - sortedcontainers=2.4.0=pyhd8ed1ab_1
   - sparse=0.15.4=py310hca03da5_0
