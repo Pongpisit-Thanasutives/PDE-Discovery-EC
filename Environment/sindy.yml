@@ -55,10 +55,10 @@ dependencies:
   - dav1d=1.2.1=h80987f9_0
   - debugpy=1.8.16=py310h0962b89_0
   - defusedxml=0.7.1=pyhd3eb1b0_0
-  - deprecated=1.2.13=py310hca03da5_0
+  - deprecated=1.2.18=py310hca03da5_0
   - diff-match-patch=20200713=pyhd3eb1b0_0
   - dill=0.3.9=pyhd8ed1ab_1
-  - docstring-to-markdown=0.11=py310hca03da5_0
+  - docstring-to-markdown=0.17=py310hca03da5_0
   - docutils=0.21.2=py310hca03da5_0
   - ecos=2.0.14=py310hae04be4_1
   - exceptiongroup=1.2.0=py310hca03da5_0
@@ -164,7 +164,9 @@ dependencies:
   - lz4-c=1.9.4=h313beb8_1
   - markupsafe=3.0.2=py310h80987f9_0
   - matplotlib-base=3.10.6=py310h066045a_0
+  - matplotlib-inline=0.1.7=py310hca03da5_0
   - mccabe=0.7.0=pyhd3eb1b0_0
+  - mdurl=0.1.2=py310hca03da5_0
   - metis=5.1.0=h15f6cfe_1007
   - mistune=3.1.2=py310hca03da5_0
   - mlxtend=0.23.4=pyhd8ed1ab_0
@@ -286,7 +288,7 @@ dependencies:
   - rtree=1.4.1=py310hee04776_0
   - scienceplots=2.1.1=pyhd8ed1ab_1
   - scikit-image=0.25.2=py310h5936506_0
-  - scikit-learn=1.7.1=py310h6e33161_0
+  - scikit-learn=1.7.2=py310hc6ded6b_0
   - scikit-sparse=0.4.14=py310he1f27a3_0
   - scs=3.2.7.post2=default_py310h24cc7b1_0
   - seaborn=0.13.2=py310hca03da5_3
@@ -395,8 +397,6 @@ dependencies:
       - l0learn==0.4.3
       - markdown-it-py==3.0.0
       - matplotlib==3.10.3
-      - matplotlib-inline==0.1.7
-      - mdurl==0.1.2
       - mealpy==3.0.1
       - ml-dtypes==0.5.1
       - mockito==1.5.4
